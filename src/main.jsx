@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Demo from './demo';
+import Page from './page';
 
 let appMountPoint = document.querySelector('#app');
-ReactDOM.render(<Demo />, appMountPoint);
+ReactDOM.render(<Page structure={null} />, appMountPoint);
