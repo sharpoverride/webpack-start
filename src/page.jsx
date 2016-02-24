@@ -40,15 +40,13 @@ export default class Demo extends React.Component {
         const structure = PageConfig;
 
         let sections = PageConfig.sections.map((section, index) => {
-            var size = 12 / section.controls.length;
-
-            console.log('section', section, `size ${size}`);   
+            console.log('section', section, `size ${size}`);
             var controls = section.controls.map((control, controlIndex) => {
                 var controlProps = PageConfig.controls[control];
 
                 console.log('controls', control, controlProps);
                 return ( <div
-                        className={`col s${size}`}
+                        className={`col s3`}
                         key={`control-${controlIndex}`}
                     >
                         <div className="divider"></div>
