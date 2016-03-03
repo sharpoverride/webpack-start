@@ -40,7 +40,7 @@ export default class Demo extends React.Component {
         const structure = PageConfig;
 
         let sections = PageConfig.sections.map((section, index) => {
-            console.log('section', section, `size ${size}`);
+            console.log('section', section);
             var controls = section.controls.map((control, controlIndex) => {
                 var controlProps = PageConfig.controls[control];
 
