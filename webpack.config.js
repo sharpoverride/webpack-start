@@ -22,11 +22,24 @@ module.exports = {
         new webpack.NoErrorsPlugin(),
         new CommonsChunkPlugin("commons.chunk.js")
     ],
-     module: {
+    module: {
         loaders: [{
             test: /\.jsx?$/,
             loaders: ['babel'],
             include: path.join(__dirname, 'src')
-        }]
-  }
+        },
+            {
+                test: /\.less$/,
+                loader: "style-loader!css-loader!less-loader"
+            },
+            {
+                test: /\.css$/,
+                loader: "style-loader!css-loader"
+            },
+            {
+                test: /\.(eot|woff|woff2|ttf|svg|png|jpg)$/,
+                loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+            }
+        ]
+    }
 }
